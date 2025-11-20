@@ -1,0 +1,52 @@
+
+body {
+  font-family: Arial, sans-serif;
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+ }
+  
+
+input {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.Wrapper {
+  background: #fff;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  width: 600px;
+}
+
+h1,h2 {
+  text-align: center;
+  color: #333;
+}
+
+label {
+  display: block;
+  margin-top: 10px;
+}
+
+
+button {
+  background:#d86ba0; 
+   width: 100%;
+  border:none; 
+  color:#fff;
+   padding:10px 16px;
+  border-radius:6px; 
+  cursor:pointer; 
+  font-weight:500;
+}
+
+button:hover { 
+    background:#c25e91;
+ }
+

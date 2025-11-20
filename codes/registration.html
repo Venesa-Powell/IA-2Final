@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Register</title>
+  <link rel="stylesheet" href="../css/login.css">
+  
+</head>
+<body>
+
+   
+  <div class="Wrapper" >
+    <h2>Register</h2>
+    <form id="registerForm">
+        <div>
+      <label for="firstname">FirstName:</label>
+      <input type="text" id="firstname" required>
+        </div>
+
+       <br>
+
+        <div>
+       <label for="lastname">last Name:</label>
+      <input type="text" id="lastname" required>
+        </div>
+
+        <br>
+
+        <div>
+      <label for="dob">Date of Birth:</label>
+      <input type="date" id="dob" required>
+      </div>
+
+      <br>
+        <div>
+      <label for="email">Email:</label>
+      <input type="email" id="email" required>
+      </div>
+
+      <br>
+
+      <div>
+      <label for="username">Username:</label>
+      <input type="text" id="username" required>
+      </div>
+
+      <br>
+
+      <div>
+      <label for="password">Password:</label>
+      <input type="password" id="password" minlength="8" required>
+      </div>
+
+      <br>
+
+      <div>
+      <label for="confirmpassword">confirm Password:</label>
+      <input type="password" id="confirmpassword" minlength="8" required>
+      </div>
+
+      <br>
+
+      <div>
+      <button type="submit" id="registerBtn">Register</button>
+      </div>
+      <div class="register link">
+        <p>Already have an account? <a href="../codes/login.html">login here</a></p>
+      </div>
+
+    </form>
+  </div>
+   <script src= '../reg.js'></script>
+</body>
+</html>

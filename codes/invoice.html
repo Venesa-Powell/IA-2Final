@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Invoice</title>
+<link rel="stylesheet" href="../css/invoice.css">
+</head>
+<body>
+   <header2>
+  <div class="logo">Hair X Beauty</div>
+  
+</header2>
+
+  <h1>Invoice</h1>
+
+  <div class="invoice-info">
+    <div>
+      <h3>Invoice From:</h3>
+      <p>Hair x Beauty <br>12 Main branch St<br>+1 234 567 890</p>
+    </div>
+
+    <div>
+      <h3>Invoice To:</h3>
+      <p id="invoice-name"></p>
+      <p id="invoice-address"></p>
+    </div>
+  </div>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Product</th>
+        <th>Qty</th>
+        <th>Price</th>
+        <th>Total</th>
+      </tr>
+      
+    </thead>
+    <tbody id="invoice-body"></tbody>
+  </table>
+
+  <div class="invoice-summary">
+    <p>Subtotal: <span id="invoice-subtotal"></span></p>
+    <p>Discount: <span id="invoice-discount"></span></p>
+    <p>Delivery Fee: <span id="invoice-shipping"></span></p>
+    <hr>
+    <h3>Total: <span id="invoice-total"></span></h3>
+  </div>
+
+  <script src="../invoice.js"> defer</script>
+</body>
+</html>

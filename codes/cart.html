@@ -1,0 +1,42 @@
+<!doctype html><html><head>
+<meta charset="utf-8"><title>Cart</title>
+<link rel="stylesheet" href="../css/cart.css">
+<script src="/script.js" defer></script>
+</head><body>
+<header>
+  <div class="logo">Hair X Beauty</div>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="checkout.html">Checkout</a>
+    <a href="products.html">Products</a>
+  </nav>
+</header>
+
+
+<div id="cart-container">
+  
+  <table class="cart-table">
+    <thead>
+      <tr>
+        <th>Products</th>
+        <th>Price</th>
+        <th>Quantity</th>
+        <th>Total</th>
+        <th>Remove</th>
+      </tr>
+    </thead>
+    <tbody id="cart-items"></tbody>
+  </table>
+
+  <div class="cart-summary">
+    <h3>Cart Total</h3>
+    <p>Subtotal: <span id="subtotal">$0.00</span></p>
+    <p>Delivery Fee: <span id="delivery">$50</span></p>
+    <h4>Grand Total: <span id="grandtotal">$0.00</span></h4>
+  </div>
+</div>
+
+<footer>© 2025 Hair X Beauty</footer>
+<script src="../cart.js" defer></script>
+</body>
+</html>
