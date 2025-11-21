@@ -19,9 +19,6 @@ function cancelOrder() {
   window.location.href = 'cart.html';
 }
 
-function logout() {
-  localStorage.removeItem("isLoggedIn");
-  alert("You have been logged out.");}
 
 
 // Check login on page load
