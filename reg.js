@@ -7,11 +7,11 @@ function returnText() {
 // Array to store registration data
 const regData = [];
 
-//  event parameter
+//  event listener for form submission
 document.getElementById("registerForm").addEventListener("submit", function (event) {
-  event.preventDefault(); // correct variable name
+  event.preventDefault(); 
 
-  //  Use the  IDs from  HTML
+  // get form values to collect user data to store in local storage
   const user = {
     firstname: document.getElementById("firstname").value,
     lastname: document.getElementById("lastname").value,

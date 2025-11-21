@@ -66,28 +66,12 @@ function saveCheckoutInfo() {
     expiry: document.getElementById('expiry').value,
     total: parseFloat(document.getElementById("amount").textContent) || 0,
     discount: discount || 0,
-    shippingFee: 60 // Delivery fee
+    shippingFee: 50 // Delivery fee
   };
-
+// Store in localStorage
   localStorage.setItem('checkoutInfo', JSON.stringify(checkoutInfo));
 }
 
-// Add product to invoice storage
-function addToInvoice(id, name, price, length, type, quantity) {
-  const invoice = JSON.parse(localStorage.getItem('invoice')) || [];
-
-  const existingItem = invoice.find(item =>
-    item.id === id && item.length === length && item.type === type
-  );
-
-  if (existingItem) {
-    existingItem.quantity += quantity;
-  } else {
-    invoice.push({ id, name, price, length, type, quantity });
-  }
-
-  localStorage.setItem('invoice', JSON.stringify(invoice));
-}
 
 //  Checkout button — finalize and redirect
 function confirmOrder() {
@@ -98,10 +82,10 @@ function confirmOrder() {
   const cart = JSON.parse(localStorage.getItem("cart")) || [];
   localStorage.setItem("invoice", JSON.stringify(cart));
 
-  alert("Order confirmed! loading invoice...");
+  alert("Order confirmed! loading ...");
 
-  // Clear the cart and move to invoice page
+  // Clear the cart and move to confirmation page
   localStorage.removeItem("cart");
-  window.location.href = "invoice.html";
+  window.location.href = "thank.html";
 
 }
