@@ -10,7 +10,7 @@ function clearForm() {
 
 function closePage() {
   alert('Closing checkout page...');
-  window.location.href = 'index.html';
+  window.location.href = '../index.html';
 }
 
 

@@ -31,7 +31,7 @@ document.getElementById("loginForm")?.addEventListener("submit", function (event
     // Mark user as logged in
     localStorage.setItem("isLoggedIn", "true");
     
-    window.location.href = "index.html"; // Redirect to home page
+    window.location.href = "../index.html"; // Redirect to home page
 
   } else {
     alert(" Login has failed! Check your username and/or password.");
