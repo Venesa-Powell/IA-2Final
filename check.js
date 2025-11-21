@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
   if (!isLoggedIn) {
     alert("You must log in or create an account before checking out.");
     window.location.href = "login.html";
-    return;  window.location.href = "codes/checkout.html";  
+  
   } 
 });
 //  Load cart total and initialize discount
