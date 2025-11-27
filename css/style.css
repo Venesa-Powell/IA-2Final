@@ -6,6 +6,11 @@ header {
   display:flex; justify-content:space-between; align-items:center;
   padding:12px 24px; border-bottom:1px solid #eee;
 }
+
+.top-margin {
+    margin-top: 20px;
+}
+
 .logo { 
   font-size:1.4rem; 
   font-weight:bold; 
