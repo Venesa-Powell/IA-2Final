@@ -20,13 +20,13 @@ function cancelOrder() {
 }
 
 
-
+//event handler
 // Check login on page load
-document.addEventListener("DOMContentLoaded", () => {
-  const isLoggedIn = localStorage.getItem("isLoggedIn");
+document.addEventListener("DOMContentLoaded", () => { //for the whole document listen for content loaded
+  const isLoggedIn = localStorage.getItem("isLoggedIn"); //look for isLoggedIn key in localStorage
   if (!isLoggedIn) {
     alert("You must log in or create an account before checking out.");
-    window.location.href = "login.html";
+    window.location.href = "login.html"; //window.location.href means the whole browser window 
   
   } 
 });
@@ -35,13 +35,14 @@ let total = parseFloat(localStorage.getItem("cartTotal")) || 0;
 let discount = 0;
 
 // Display totals
-document.getElementById("total").textContent = total.toFixed(2);
+document.getElementById("total").textContent = total.toFixed(2); //in the html with id total set its text content to total value with 2 decimal places
 document.getElementById("amount").textContent = total.toFixed(2);
 
 //  Coupon feature
 document.getElementById("applyCoupon").addEventListener("click", function () {
   const code = document.getElementById("coupon").value.trim().toUpperCase();
-
+  
+ //INTERACTIVITY logic
   if (code === "NESA2") {
     discount = total * 0.10;
     alert("Coupon applied! You got 10% off.");
@@ -57,6 +58,7 @@ document.getElementById("applyCoupon").addEventListener("click", function () {
 
 // Save checkout info to localStorage
 function saveCheckoutInfo() {
+  
   const checkoutInfo = {
     name: document.getElementById('name').value,
     email: document.getElementById('email').value,
@@ -77,10 +79,7 @@ function saveCheckoutInfo() {
 function confirmOrder() {
   // Save checkout details
   saveCheckoutInfo();
-
-  // Add current cart items to invoice
-  const cart = JSON.parse(localStorage.getItem("cart")) || [];
-  localStorage.setItem("invoice", JSON.stringify(cart));
+  
 
   alert("Order confirmed! loading ...");
 

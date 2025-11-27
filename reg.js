@@ -7,9 +7,10 @@ function returnText() {
 // Array to store registration data
 const regData = [];
 
+//EVENT HANDLERS
 //  event listener for form submission
-document.getElementById("registerForm").addEventListener("submit", function (event) {
-  event.preventDefault(); 
+document.getElementById("registerForm").addEventListener("submit", function (event) { //REceives the submit event
+  event.preventDefault(); //STOPS FORM FROM SUBMITTING AND REFRESHING PAGE
 
   // get form values to collect user data to store in local storage
   const user = {
@@ -21,7 +22,7 @@ document.getElementById("registerForm").addEventListener("submit", function (eve
     password: document.getElementById("password").value,
     
   };
-
+  //INPUT VALIDATION A CRITERIA
   const confirmpassword = document.getElementById("confirmpassword").value;
   // check if passwords match
    if (user.password !== confirmpassword) {

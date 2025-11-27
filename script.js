@@ -8,27 +8,29 @@ const items = [
   { id: "w5", name: "Luxury Blonde 613", price: 300, img: "../Assets/blonde.jpg" }
 ];
 
-// Render product cards to the page
+// show all product cards to the page
 function render() {
-  const container = document.getElementById("products");
+  const container = document.getElementById("products"); // DOM MANIPULATION Select PRODUCT CONTAINER
   if (!container) return;
 
-  container.innerHTML = "";
+ // DOM MANIPULATION Dynamically  UPDATE HTML CONTENT CRITERIA
+  container.innerHTML = ""; //so i dont get duplicates
 
   // Loop through each product
   // when first item in the array is reached, create a card for it
   for (let i = 0; i < items.length; i++) {
     const p = items[i];
 
+ //DOM MANIPULATION Dynamically CREATE HTML CONTENT CRITERIA
     // Create card
-    const card = document.createElement("div");
-    card.className = "card";
+    const card = document.createElement("div"); //create a new container div
+    card.className = "card"; //give the new box a name 
 
     // Image
     const img = document.createElement("img");
     img.src = p.img;
     img.alt = p.name;
-    card.appendChild(img);
+    card.appendChild(img); // put image inside card
 
     // Name
     const name = document.createElement("h4");
@@ -46,16 +48,17 @@ function render() {
     card.appendChild(lengthLabel);
 
     // Length dropdown
-    const lengthSelect = document.createElement("select");
+    const lengthSelect = document.createElement("select"); //create dropdown
     lengthSelect.id = "length-" + p.id;
 
     const lengths = ['14"', '16"', '18"', '20"', '22"'];
+    //loop through lentghs
     for (let j = 0; j < lengths.length; j++) {
-      const opt = document.createElement("option");
+      const opt = document.createElement("option");// create option element
       opt.textContent = lengths[j];
-      lengthSelect.appendChild(opt);
+      lengthSelect.appendChild(opt); // add option to dropdown
     }
-    card.appendChild(lengthSelect);
+    card.appendChild(lengthSelect); // add dropdown to card
 
     // Type label
     const typeLabel = document.createElement("label");
@@ -90,7 +93,7 @@ function render() {
 
     // Add to Cart button
     const btn = document.createElement("button");
-    btn.textContent = "Add to Cart";
+    btn.textContent = "Add to Cart"; // CHANGE BUTTON TEXT DOM MANIPULATION
 
     btn.onclick = function () {
       addToCart(
@@ -111,7 +114,7 @@ function render() {
 }
 
 // Run on page load
-window.onload = render;
+window.onload = render; // when page loads run render function
 
 
 
@@ -126,7 +129,7 @@ function addToCart(id, name, price, length, type, quantity) {
   // Check if item already exists
   let existingItem = null;
 
-  for (let i = 0; i < cart.length; i++) {
+  for (let i = 0; i < cart.length; i++) { 
     let item = cart[i];
 
     if (item.id === id &&
@@ -134,7 +137,7 @@ function addToCart(id, name, price, length, type, quantity) {
         item.type === type) {
 
       existingItem = item;
-      break; // stop when found
+      break; // stop when found so we dont keep looping
     }
   }
 

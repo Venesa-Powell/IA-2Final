@@ -2,7 +2,7 @@
 // array to store Login data
 let loginData = JSON.parse(localStorage.getItem("loginData")) || [];
 
-
+//EVENT HANDLER 
 document.getElementById("loginForm")?.addEventListener("submit", function (event) {
   event.preventDefault();
 
@@ -13,7 +13,7 @@ document.getElementById("loginForm")?.addEventListener("submit", function (event
   // Store login data
   const user = { username, password };
   //add to login array
-    loginData.push(user);
+    loginData.push(user); // TO login array add user
 
     // save and Store login data in localStorage
     localStorage.setItem("loginData", JSON.stringify(loginData));
@@ -21,7 +21,7 @@ document.getElementById("loginForm")?.addEventListener("submit", function (event
   // Retrieve registered users from localStorage
   const registeredUsers = JSON.parse(localStorage.getItem("regData")) || [];
     // Check if a matching user exists
-  const foundUser = registeredUsers.find(
+  const foundUser = registeredUsers.find( 
     (user) => user.username === username && user.password === password
   );
 

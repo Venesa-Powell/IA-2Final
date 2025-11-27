@@ -13,8 +13,8 @@ header {
   display:flex; 
   justify-content:space-between;
    align-items:center;
-  padding:12px 24px; 
-  border-bottom:1px solid #eee;
+  padding:12px 24px; /* increased padding around header for better spacing*/
+  border-bottom:1px solid #eee; /* subtle border for separation */
 }
 
 .logo {
@@ -24,8 +24,8 @@ header {
 
 nav a {
   margin-left:16px;
-   text-decoration:none;
-    color:#444;
+  text-decoration:none; /* removed underline for cleaner look */
+  color:#444;
 }
 nav a:hover { color:#d86ba0; }
 
@@ -44,34 +44,30 @@ p { margin-bottom:10px;
 button {
   background:#d86ba0; 
   border:none; color:#fff;
-   padding:10px 16px;
+   padding:10px 16px; /* increased padding sobuttons are wider*/
   border-radius:6px; 
   cursor:pointer; 
-  font-weight:500;
 }
 
-button:hover { background:#c25e91; }
+button:hover { background:#c25e91; } 
 
 footer { text-align:center; 
-  padding:20px; 
   color:#888; 
-  margin-top:40px;
    font-size:0.9rem; }
 
 
 
 .cart-container {
-  width: 80%;
+  width: 80%; /* increased width for better visibility */
   margin: 40px auto;
   font-family: Arial, sans-serif;
 }
 
 .cart-table {
   width: 100%;
-  border-collapse: collapse;
 }
 
-.cart-table th, .cart-table td {
+.cart-table th, .cart-table td { 
   padding: 12px;
   border-bottom: 1px solid #ddd;
   text-align: center;
